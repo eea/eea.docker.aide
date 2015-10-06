@@ -9,6 +9,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var nconf = require('nconf');
+var crontab = require('node-crontab');
 
 var routes = require('./routes');
 var managementCommands = require('./management/commands');
@@ -40,6 +41,14 @@ function checkError(err) {
         process.stderr.write(err.message + '\n\n');
         process.exit(2);
     }
+}
+
+// Schedule sync as expressed in env variables
+// only if running the server
+var syncCrontab = process.env.SYNC_CRONTAB;
+if (syncCrontab && process.argv[2] == 'runserver') {
+    crontab.scheduleJob(syncCrontab, managementCommands.create_index);
+    console.log("Enabled sync crontab job: " + syncCrontab);
 }
 
 searchServer.Server(app, __dirname + '/settings.json', function(err, srv) {

@@ -47,8 +47,8 @@ concat(str(YEAR(?beginPosition)),'#', ?Country, '.', ?Pollutant, '.', ?Aggregati
 (?typeURI as ?StationType_link)
 ?StationArea
 (?areaURI as ?StationArea_link)
-ROUND(xsd:decimal(?StationLat) * 10000)/10000.0 AS ?StationLatitude
-ROUND(xsd:decimal(?StationLong) * 10000)/10000.0 AS ?StationLongitude
+ROUND(xsd:decimal(?StationLat) * 1000000)/1000000.0 AS ?StationLatitude
+ROUND(xsd:decimal(?StationLong) * 1000000)/1000000.0 AS ?StationLongitude
 concat(str(?StationLat),',',str(?StationLong)) as ?geo_pos
 ?Zone
 (?ZoneURI as ?Zone_link)

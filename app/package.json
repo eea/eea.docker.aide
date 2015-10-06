@@ -9,6 +9,7 @@
     "eea-searchserver": "*",
     "morgan": "*",
     "request": "*",
+    "node-crontab": "*",
     "sparql-client": "*"
   },
   "repository": {
