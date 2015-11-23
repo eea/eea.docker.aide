@@ -74,6 +74,10 @@ var aidedataMappings = {
     "ZoneType" : {
         "type" : "string",
         "analyzer" : "none"
+    },
+    "VerificationFlag" : {
+        "type" : "string",
+        "analyzer" : "coma"
     }
 };
 

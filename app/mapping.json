@@ -547,7 +547,13 @@
                 "visible": true
             },
             "facet": {
-                "visible": false
+                "visible": true,
+                "title": "Data verification",
+                "pos": 12,
+                "type": "facet",
+                "size": 4,
+                "order": "term",
+                "facet_display_options": ["sort", "checkbox"]
             },
             "csv_tsv": {
                 "title": "Data verification",
