@@ -55,7 +55,7 @@
                 "title": "Country",
                 "pos": 0,
                 "type": "facet",
-                "size": 40,
+                "size": 9999,
                 "order": "term",
                 "facet_display_options": ["sort", "checkbox"]
             },
@@ -313,7 +313,7 @@
                 "title": "Data aggregation process",
                 "pos": 3,
                 "type": "facet",
-                "size": 10,
+                "size": 9999,
                 "order": "term",
                 "facet_display_options": ["sort", "checkbox"]
             },
@@ -415,7 +415,7 @@
                 "title": "Air pollutant",
                 "pos": 2,
                 "type": "facet",
-                "size": 14,
+                "size": 9999,
                 "order": "term",
                 "facet_display_options": ["sort", "checkbox"]
             },
@@ -581,7 +581,7 @@
                 "title": "Type of station",
                 "pos": 6,
                 "type": "facet",
-                "size": 4,
+                "size": 9999,
                 "order": "term",
                 "facet_display_options": ["sort", "checkbox"]
             },
@@ -611,7 +611,7 @@
                 "title": "Area of station",
                 "pos": 7,
                 "type": "facet",
-                "size": 50,
+                "size": 9999,
                 "order": "term",
                 "facet_display_options": ["sort", "checkbox"]
             },
@@ -689,7 +689,7 @@
                 "title": "Zone code",
                 "pos": 9,
                 "type": "facet",
-                "size": 10,
+                "size": 9999,
                 "order": "term",
                 "facet_display_options": ["sort", "checkbox"]
             },
@@ -743,7 +743,7 @@
                 "title": "Type of zone",
                 "pos": 10,
                 "type": "facet",
-                "size": 3,
+                "size": 9999,
                 "order": "term",
                 "facet_display_options": ["sort", "checkbox"]
             },
