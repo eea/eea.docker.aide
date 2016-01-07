@@ -46,11 +46,18 @@ function createIndex() {
             .indexFromQuery(config.endpoint, config.queryTemplate, config.filtersQuery, elastic, analyzers);
 }
 
+function syncIndex() {
+    new esAPI(getOptions())
+            .syncFromQuery(config.endpoint, config.queryTemplate, config.filtersQuery, analyzers);
+}
+
 function showHelp() {
     console.log('List of available commands:');
     console.log(' runserver: Run the app web server');
     console.log('');
     console.log(' create_index: Setup Elastic index and trigger indexing');
+    console.log('');
+    console.log(' sync_index: Sync Elastic index with zero downtime');
     console.log('');
     console.log(' remove_data: Remove the ES index of this application');
     console.log('');
@@ -61,5 +68,6 @@ function showHelp() {
 module.exports = { 
     'remove_data': removeData,
     'create_index': createIndex,
+    'sync_index': syncIndex,
     'help': showHelp
 }
