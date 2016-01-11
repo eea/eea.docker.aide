@@ -6,7 +6,7 @@
     "nconf": "*",
     "express": "*",
     "jade": "*",
-    "eea-searchserver": "0.0.15",
+    "eea-searchserver": "0.0.16",
     "morgan": "*",
     "request": "*",
     "node-crontab": "*",
