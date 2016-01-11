@@ -66,6 +66,8 @@ docker run -e elastic_host=$YOUR_ELASTIC_HOST run eeacms/aide help
 
 Available commands:
 * create_index: create the index on elastic_host and start harvesting
+* sync_index: recrate the index on the elastic_host and start harvesting
+  https://www.elastic.co/blog/changing-mapping-with-zero-downtime
 * reindex : recrate the index on the elastic_host and start harvesting
 * remove_data: remove the ES index of this app
 * remove_river: stop the harvesting process by removing the river

@@ -4,6 +4,13 @@
     },
     "elastic": {
         "index": "aidedata",
+        "real_index": "aidedata_blue",
+        "type": "resources",
+        "field_base":""
+    },
+    "elastic_green": {
+        "index": "aidedata",
+        "real_index": "aidedata_green",
         "type": "resources",
         "field_base":""
     },
