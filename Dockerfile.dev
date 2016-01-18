@@ -10,7 +10,7 @@ RUN npm install /tmp/eea-searchserver
 ADD ./app /code
 
 
-RUN useradd -m 500
+RUN useradd -m 500 && usermod -u 500 500
 USER 500
 ENTRYPOINT ["nodemon", "--watch", "code/", "/code/app.js"]
 CMD ["runserver"]
