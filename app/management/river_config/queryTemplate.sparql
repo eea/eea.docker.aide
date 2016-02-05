@@ -119,11 +119,11 @@ OPTIONAL{?AggregationTypeURI aqdd:broaderMetric ?ReportingMetricURI} .
 OPTIONAL{?statsURI aqr:unit ?Unit} .
 
 ?thresURI aqdd:relatedPollutant ?PollutantURI .
-?thresURI aqdd:aggregationProcess ?AggregationTypeURI .
+OPTIONAL{?thresURI aqdd:aggregationProcess ?AggregationTypeURI} .
 ?thresURI aqdd:hasReportingMetric ?ReportingMetricURI .
 ?thresURI aqdd:hasObjectiveType ?ObjectiveTypeURI .
-?thresURI aqdd:hasProtectionTarget ?ProtectionTargetURI .
-?thresURI aqdd:exceedanceThreshold ?ExceedanceThreshold .
+OPTIONAL{?thresURI aqdd:hasProtectionTarget ?ProtectionTargetURI} .
+OPTIONAL{?thresURI aqdd:exceedanceThreshold ?ExceedanceThreshold} .
 
 ?ReportingMetricURI rdfs:label ?ReportingMetric .
 ?ObjectiveTypeURI rdfs:label ?ObjectiveType .
