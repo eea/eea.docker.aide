@@ -19,16 +19,8 @@ block title
 
 block content
     if (data)
-        div(id="portal-breadcrumbs")
-            span(id="breadcrumbs-you-are-here") You are here: 
-            span(id="breadcrumbs-home")
-                a(href="http://www.eea.europa.eu/") Home
-                span(class="breadcrumbSeparator")  / 
-            span(id="breadcrumbs-1")
-                a(href="./") Air Immissions Data Explorer
-                span(class="breadcrumbSeparator")  / 
-            span(id="breadcrumbs-2")
-                span(class="breadcrumbs-current")= data._shorttitle.value
+
+        +portal_breadcrumbs ("Air Immissions Data Explorer", data._shorttitle.value)
 
         h1
             span= "Statistics for "
@@ -36,13 +28,6 @@ block content
         +detail_tables (sections, data, "http://cr.eionet.europa.eu/factsheet.action?uri=")
 
     else
-        div(class = "portalMessage errorMessage")
-            span= "Statistics with ID: "
-            b= aideid 
-            span= " does not exist"
+        +app_error("Statistics with ID: ", aideid)
 
-    div(class="visualization-info")
-        h3 Data sources
-        a(href="http://www.eea.europa.eu/data-and-maps/data/aqereporting") AQ e-Reporting
-        span  provided by 
-        a(href="http://www.eea.europa.eu") European Environment Agency (EEA)
+    +visualization_info ("http://www.eea.europa.eu/data-and-maps/data/aqereporting","AQ e-Reporting")
