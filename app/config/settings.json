@@ -1,0 +1,46 @@
+{
+    "http": {
+        "port": 3000
+    },
+    "elastic": {
+        "index": "aidedata",
+        "type": "resources",
+        "field_base":""
+    },
+    "external_templates": {
+        "local_path": "/external_templates",
+        "host": "www.eea.europa.eu",
+        "head_path": "/templates/v2/getRequiredHead?jsdisable=all",
+        "header_path": "/templates/v2/getHeader?jsdisable=all",
+        "footer_path": "/templates/v2/getFooter"
+    },
+    "layout_vars": {
+        "head_title": "AIDE &mdash; AIr Data Explorer &mdash; European Environment Agency",
+        "css_resources": {
+            "index_page": [
+                "css/no-more-tables.css",
+                "css/aide.facetview.css"
+            ],
+            "details_page": [
+                "css/aide.facetview.css"
+            ]
+        },
+        "js_resources": {
+            "index_page": [
+                "javascripts/aide.facetview.js"
+            ],
+            "details_page": [
+                "javascripts/jq.tools.js",
+                "http://www.eea.europa.eu/register_function.js",
+                "http://www.eea.europa.eu/nodeutilities.js",
+                "http://www.eea.europa.eu/mark_special_links.js"
+            ]
+        },
+        "site_title": "AIDE  &mdash; AIr Data Explorer",
+        "site_description": "Slice and dice air quality data. This viewer helps you explore the latest version of European air quality statistics (AQ e-Reporting following EC Decision 2011/850/EU). Please note that the viewer and its underpinning dataset are 'beta' versions, and remain subject to changes. Users should note that the dataset may not contain all data received to date by EEA, and that data for 2014 may contain both verified and unverified data received from countries.",
+        "breadcrumbs": "Air Data Explorer",
+        "dataprovencance_info_text": "AQ e-Reporting",
+        "dataprovencance_info_url": "http://www.eea.europa.eu/data-and-maps/data/aqereporting",
+        "further_info": ""
+    }
+}
