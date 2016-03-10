@@ -14,8 +14,8 @@ block extrastyles
 
 block content
     if (data)
-
-        +portal_breadcrumbs (breadcrumbs, data._shorttitle.value)
+        if (enableBreadcrumbs)
+            +portal_breadcrumbs (breadcrumbs, data._shorttitle.value)
 
         h1
             span= "Statistics for "
