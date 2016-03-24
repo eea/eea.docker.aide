@@ -1,26 +1,21 @@
-block extrajavascripts
-    script(type='text/javascript').
-        $(document).ready(function($){
-            $("div.container > div.content").attr("id", "content")
-        });
-
-    script(type='text/javascript', src='http://www.eea.europa.eu/register_function.js')
-    script(type='text/javascript', src='http://www.eea.europa.eu/nodeutilities.js')
-    script(type='text/javascript', src='http://www.eea.europa.eu/mark_special_links.js')
-
-block extrastyles
-    link(rel="stylesheet", href="css/aide.facetview.css")
-
 block title
     if (data)
         title= "Statistics for " + data._shorttitle.value
     else
         title= "Missing Statistics"
 
+block extrajavascripts
+    each script in js_resources.details_page
+        script(type='text/javascript', src=script)
+
+block extrastyles
+    each style in css_resources.details_page
+        link(rel='stylesheet', href=style)
+
 block content
     if (data)
-
-        +portal_breadcrumbs ("Air Immissions Data Explorer", data._shorttitle.value)
+        if (enableBreadcrumbs)
+            +portal_breadcrumbs (breadcrumbs, data._shorttitle.value)
 
         h1
             span= "Statistics for "
@@ -30,4 +25,6 @@ block content
     else
         +app_error("Statistics with ID: ", aideid)
 
-    +visualization_info ("http://www.eea.europa.eu/data-and-maps/data/aqereporting","AQ e-Reporting")
+    +visualization_info (dataprovencance_info_url,dataprovencance_info_text)
+
+    div!= further_info

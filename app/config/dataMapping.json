@@ -1,24 +1,4 @@
-// Analyzers to be used for different object properties
-var analyzers = {
-    "none" : {
-      "type" : "keyword"
-    },
-    "coma" : {
-      "type" : "pattern",
-      "lowercase" : false,
-      "pattern" : ", "
-    },
-    "semicolon" : {
-      "type" : "pattern",
-      "lowercase" : false,
-      "pattern" : "; "
-    }
-};
-
-// Proprety mappings for aidedata
-// Describe how properties get indexed into ElasticSearch
-
-var aidedataMappings = {
+{
     "Country" : {
         "type" : "string",
         "analyzer" : "none"
@@ -79,19 +59,4 @@ var aidedataMappings = {
         "type" : "string",
         "analyzer" : "coma"
     }
-};
-
-var mappings = {
-    'settings': {
-        'analysis': {
-            'analyzer': analyzers
-        }
-    },
-    'mappings': {
-        'resources': {
-            'properties': aidedataMappings
-        }
-    }
-};
-
-module.exports = { 'mappings': mappings };
+}

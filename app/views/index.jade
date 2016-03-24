@@ -1,18 +1,21 @@
 block title
-    title AIDE*  &mdash; AIr Data Explorer &mdash; European Environment Agency
+    title!= head_title
 
 block extrajavascripts
-    script(type='text/javascript', src='javascripts/aide.facetview.js')
+    each script in js_resources.index_page
+        script(type='text/javascript', src=script)
 
 block extrastyles
-    link(rel='stylesheet', href='css/no-more-tables.css')
-    link(rel="stylesheet", href="css/aide.facetview.css")
+    each style in css_resources.index_page
+        link(rel='stylesheet', href=style)
 
 block content
-    +portal_breadcrumbs ("Air Data Explorer")
-    h1 AIDE  &mdash; AIr Data Explorer for Europe
-    p Slice and dice air quality data. This viewer helps you explore the latest version of European air quality statistics (AQ e-Reporting following EC Decision 2011/850/EU). Please note that the viewer and its underpinning dataset are 'beta' versions, and remain subject to changes. Users should note that the dataset may not contain all data received to date by EEA, and that data for 2014 may contain both verified and unverified data received from countries.
+    if (enableBreadcrumbs)
+        +portal_breadcrumbs (breadcrumbs)
+    h1!= site_title
+    p!= site_description
     .facet-view-simple
 
-    +visualization_info ("http://www.eea.europa.eu/data-and-maps/data/aqereporting","AQ e-Reporting")
+    +visualization_info (dataprovencance_info_url,dataprovencance_info_text)
 
+    div!= further_info
