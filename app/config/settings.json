@@ -41,7 +41,7 @@
         "enableBreadcrumbs": true,
         "breadcrumbs": "Air Data Explorer",
         "dataprovencance_info_text": "AQ e-Reporting",
-        "dataprovencance_info_url": "http://www.eea.europa.eu/data-and-maps/data/aqereporting",
+        "dataprovencance_info_url": "http://www.eea.europa.eu/data-and-maps/data/aqereporting-1",
         "further_info": ""
     }
 }
