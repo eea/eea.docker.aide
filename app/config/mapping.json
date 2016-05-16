@@ -105,13 +105,7 @@
                 "visible": true
             },
             "facet": {
-                "visible": true,
-                "title": "Reporting year",
-                "pos": 1,
-                "type": "facet",
-                "size": 5,
-                "order": "term",
-                "facet_display_options": ["sort", "checkbox"]
+                "visible": false
             },
             "csv_tsv": {
                 "title": "Reporting year",

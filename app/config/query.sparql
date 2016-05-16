@@ -130,6 +130,7 @@ OPTIONAL{?thresURI aqdd:exceedanceThreshold ?ExceedanceThreshold} .
 ?ObjectiveTypeURI skos:notation ?ObjectiveType_notation .
 ?ProtectionTargetURI rdfs:label ?ProtectionTarget .
 
+FILTER (YEAR(?beginPosition) = 2014) .
 FILTER (?Namespace = '<Namespace>') .
 
 }}
