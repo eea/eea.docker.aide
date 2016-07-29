@@ -41,11 +41,11 @@
     },
     "AQvalue" : {
         "type" : "double",
-        "analyzzer" : "none"
+        "analyzer" : "none"
     },
     "DataCoverage" : {
         "type" : "double",
-        "analyzzer" : "none"
+        "analyzer" : "none"
     },
     "StationArea" : {
         "type" : "string",
