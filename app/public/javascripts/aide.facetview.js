@@ -37,6 +37,8 @@ jQuery(document).ready(function($) {
             paging: {
                 from: 0,
                 size: 10
-            }
+            },
+            display_type_options: ['tabular'],
+            display_type: 'card'
         });
 });
